@@ -1,0 +1,559 @@
+.landing-page {
+  --primary-color: #0284c7;
+  --primary-dark: #0369a1;
+  --secondary-color: #03045e;
+  --accent-color: #90e0ef;
+  --text-dark: #1b263b;
+  --text-light: #778da9;
+  --white: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #03045e 0%, #0369a1 100%);
+  --card-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --radius: 12px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-main: "Poppins", sans-serif;
+  --glass-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Reset & Base Styles */
+.landing-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #d8f1fe 0%, #fdfefe 50%, #e0fbf6 100%);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   Animated Background
+   ========================================= */
+.landing-page .animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Floating Animations */
+
+/* Animated Dots */
+.landing-page .dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(2, 132, 199, 0.9);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.landing-page .dot-1 {
+  top: 15%;
+  left: 10%;
+  animation: drift 9s infinite alternate;
+}
+.landing-page .dot-2 {
+  top: 25%;
+  left: 80%;
+  animation: drift 11s infinite alternate-reverse;
+}
+.landing-page .dot-3 {
+  top: 45%;
+  left: 30%;
+  animation: drift 10s infinite alternate;
+}
+.landing-page .dot-4 {
+  top: 65%;
+  left: 15%;
+  animation: drift 12s infinite alternate-reverse;
+}
+.landing-page .dot-5 {
+  top: 85%;
+  left: 70%;
+  animation: drift 8s infinite alternate;
+}
+.landing-page .dot-6 {
+  top: 40%;
+  left: 85%;
+  animation: drift 10s infinite alternate-reverse;
+}
+.landing-page .dot-7 {
+  top: 10%;
+  left: 50%;
+  animation: drift 9s infinite alternate;
+}
+.landing-page .dot-8 {
+  top: 75%;
+  left: 40%;
+  animation: drift 12s infinite alternate-reverse;
+}
+.landing-page .dot-9 {
+  top: 55%;
+  left: 60%;
+  animation: drift 8s infinite alternate;
+}
+.landing-page .dot-10 {
+  top: 30%;
+  left: 20%;
+  animation: drift 11s infinite alternate-reverse;
+}
+.landing-page .dot-11 {
+  top: 20%;
+  left: 35%;
+  animation: drift 9s infinite alternate;
+}
+.landing-page .dot-12 {
+  top: 50%;
+  left: 10%;
+  animation: drift 10s infinite alternate-reverse;
+}
+.landing-page .dot-13 {
+  top: 80%;
+  left: 25%;
+  animation: drift 9s infinite alternate;
+}
+.landing-page .dot-14 {
+  top: 15%;
+  left: 75%;
+  animation: drift 10s infinite alternate-reverse;
+}
+.landing-page .dot-15 {
+  top: 40%;
+  left: 65%;
+  animation: drift 11s infinite alternate;
+}
+.landing-page .dot-16 {
+  top: 70%;
+  left: 85%;
+  animation: drift 8s infinite alternate-reverse;
+}
+.landing-page .dot-17 {
+  top: 90%;
+  left: 45%;
+  animation: drift 12s infinite alternate;
+}
+.landing-page .dot-18 {
+  top: 5%;
+  left: 90%;
+  animation: drift 8s infinite alternate-reverse;
+}
+.landing-page .dot-19 {
+  top: 60%;
+  left: 50%;
+  animation: drift 12s infinite alternate;
+}
+.landing-page .dot-20 {
+  top: 35%;
+  left: 5%;
+  animation: drift 9s infinite alternate-reverse;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(50px, 50px);
+    opacity: 0.3;
+  }
+}
+
+/* Web Connection Lines */
+.landing-page .web-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.landing-page .web-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawWeb 10s infinite ease-in-out;
+}
+
+.landing-page .web-line-1 {
+  animation-delay: 0s;
+}
+.landing-page .web-line-2 {
+  animation-delay: -5s;
+}
+.landing-page .web-line-3 {
+  animation-delay: -8s;
+}
+.landing-page .web-line-4 {
+  animation-delay: -9s;
+}
+.landing-page .web-line-5 {
+  animation-delay: -6s;
+}
+.landing-page .web-line-6 {
+  animation-delay: -14s;
+}
+
+@keyframes drawWeb {
+  0%,
+  100% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Flowing Lines */
+.landing-page .flowing-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.landing-page .line {
+  stroke-dasharray: 1440;
+  stroke-dashoffset: 1440;
+  animation: drawLine 15s ease-in-out infinite;
+}
+
+.landing-page .line-1 {
+  animation-delay: 0s;
+}
+
+.landing-page .line-2 {
+  animation-delay: -5s;
+}
+
+.landing-page .line-3 {
+  animation-delay: -10s;
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1440;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -1440;
+    opacity: 0;
+  }
+}
+
+/* Ensure content is above background */
+.landing-page .header,
+.landing-page .hero,
+.landing-page .footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+.landing-page .header {
+  padding: 120px 0;
+  background: transparent;
+  text-align: center;
+}
+
+.landing-page .logo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.landing-page .logo {
+  height: 100px;
+  width: auto;
+  filter: none;
+  opacity: 1;
+  box-shadow: none;
+}
+
+.landing-page .hero {
+  padding: 10px 24px 100px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.landing-page .hero-content {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.landing-page .badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.landing-page .headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.landing-page .subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* =========================================
+   Service Cards
+   ========================================= */
+.landing-page .services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.landing-page .service-card {
+  background: white;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page .service-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.landing-page .service-card:hover::after {
+  opacity: 1;
+}
+
+/* Overlay animation */
+.landing-page .service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.landing-page .service-card:hover::before {
+  left: 100%;
+}
+
+.landing-page .service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: #0284c7;
+}
+
+.landing-page .icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.landing-page .service-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.landing-page .service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.landing-page .service-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.landing-page .service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.landing-page .service-cta:hover {
+  color: var(--hover-color, #0284c7);
+  gap: 14px;
+  transform: translateX(2px);
+}
+
+.landing-page .arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.landing-page .service-cta:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+.landing-page .footer {
+  background: transparent;
+  color: #94a3b8;
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 0.875rem;
+  margin-top: -20px;
+  border-top: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 1024px) {
+  .landing-page .services-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page .headline {
+    font-size: 2.5rem;
+  }
+
+  .landing-page .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .landing-page .hero {
+    padding: 40px 20px 80px;
+  }
+
+  .landing-page .hero-content {
+    margin-bottom: 60px;
+  }
+
+  .landing-page .service-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page .headline {
+    font-size: 2rem;
+  }
+
+  .landing-page .logo {
+    height: 80px;
+  }
+}
+
+/* =========================================
+   Accessibility - Reduced Motion
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .landing-page .orb,
+  .landing-page .line {
+    animation: none !important;
+  }
+
+  .landing-page .animated-background {
+    transform: none !important;
+  }
+
+  .landing-page .service-card::before {
+    animation: none !important;
+  }
+}

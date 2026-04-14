@@ -1,0 +1,6 @@
+@import './styles/globals.css';
+
+/* Legacy styles for compatibility */
+code {
+  font-family: var(--font-mono);
+}

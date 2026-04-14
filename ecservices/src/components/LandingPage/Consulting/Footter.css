@@ -1,0 +1,217 @@
+/* Footter.css */
+/* Dark Modern Footer */
+.dark-footer {
+  background-color: #0b1121;
+  color: #94a3b8;
+  padding: 80px 0 20px;
+  font-family: "Inter", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.dark-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.dark-footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.dark-footer-section h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Outfit", sans-serif;
+}
+
+.dark-footer-logo {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: -1px;
+}
+
+.company-details p {
+  color: #94a3b8;
+  line-height: 1.8;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+}
+
+.company-details a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.company-details a:hover {
+  color: #ffffff;
+}
+
+.dark-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dark-footer-section ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.dark-footer-section ul li a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 6px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form:focus-within {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #036e9a;
+  box-shadow: 0 0 0 4px rgba(3, 110, 154, 0.15);
+}
+
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #ffffff;
+  outline: none;
+}
+
+.newsletter-form button {
+  background: linear-gradient(135deg, #036e9a, #0a7a7a);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(3, 110, 154, 0.3);
+}
+
+/* Bottom Footer */
+.dark-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  color: #64748b;
+  margin: 0;
+  font-size: 14px;
+}
+
+.copyright strong {
+  color: #cbd5e1;
+}
+
+/* Social Icons - Circular */
+.dark-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.dark-social-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-social-icon:hover {
+  background: linear-gradient(135deg, #036e9a, #0a7a7a);
+  transform: translateY(-4px) rotate(8deg);
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(3, 110, 154, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dark-footer-content {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dark-footer-content {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+  }
+  
+  .dark-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dark-footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .dark-footer-section ul {
+    align-items: center;
+  }
+
+  .dark-social-links {
+    justify-content: center;
+  }
+
+  .dark-footer-container {
+    padding: 0 20px;
+  }
+}

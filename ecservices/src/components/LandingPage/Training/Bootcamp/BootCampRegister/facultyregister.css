@@ -1,0 +1,241 @@
+:root {
+  --primary-blue: #0284c7;
+  --primary-teal: #0d9488;
+  --accent-light: #b3e9e9;
+  --header-bg: #9fc6ed;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.faculty-register-page {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.register-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 8px;
+}
+
+.register-header p {
+  color: var(--text-light);
+  font-size: 1.125rem;
+}
+
+/* Form Layout */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-section {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--accent-light);
+  transition: transform 0.2s ease;
+}
+
+.form-section:hover {
+  transform: translateY(-2px);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-teal);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--accent-light);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .full-width {
+    grid-column: span 2;
+  }
+}
+
+/* Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px var(--header-bg);
+  background-color: var(--white);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+/* File Upload */
+.file-upload-group input[type="file"] {
+  display: none;
+}
+
+.file-input-wrapper {
+  border: 2px dashed var(--header-bg);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f0f9ff;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.file-input-wrapper:hover {
+  border-color: var(--primary-blue);
+  background-color: #e0f2fe;
+}
+
+.file-input-wrapper input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-cta {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.submit-btn-register {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+  color: var(--white);
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
+}
+
+.submit-btn-register:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn-register {
+  background-color: var(--white);
+  color: var(--text-light);
+  border: 1px solid #d1d5db;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn-register:hover {
+  background-color: #f3f4f6;
+  color: var(--text-dark);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .faculty-register-page {
+    padding: 20px 16px;
+  }
+
+  .register-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .form-section {
+    padding: 16px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .submit-btn-register,
+  .cancel-btn-register {
+    width: 100%;
+  }
+}

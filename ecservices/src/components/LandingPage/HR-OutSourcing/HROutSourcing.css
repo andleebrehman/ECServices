@@ -1,0 +1,331 @@
+/* HR Outsourcing Page Styles */
+.hr-outsourcing-page {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hr-outsourcing-page .hero-section {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+  color: white;
+  position: relative;
+}
+
+.hr-outsourcing-page .hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hr-outsourcing-page .hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hr-outsourcing-page .hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hr-outsourcing-page .cta-button {
+  background: white;
+  color: #0d9488;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hr-outsourcing-page .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hr-outsourcing-page .hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Section */
+.hr-outsourcing-page .services-section {
+  padding: 80px 0;
+  background: #f0fdfa;
+}
+
+.hr-outsourcing-page .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #1a202c;
+}
+
+.hr-outsourcing-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.hr-outsourcing-page .service-card {
+  background: white;
+  padding: 40px 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.hr-outsourcing-page .service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hr-outsourcing-page .service-icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.hr-outsourcing-page .service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+.hr-outsourcing-page .service-card p {
+  color: #718096;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Benefits Section */
+.hr-outsourcing-page .benefits-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.hr-outsourcing-page .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.hr-outsourcing-page .benefit-card {
+  background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px solid #0d9488;
+  transition: all 0.3s ease;
+}
+
+.hr-outsourcing-page .benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(13, 148, 136, 0.15);
+}
+
+.hr-outsourcing-page .benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hr-outsourcing-page .benefit-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0d9488;
+}
+
+.hr-outsourcing-page .benefit-card p {
+  color: #4a5568;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Process Section */
+.hr-outsourcing-page .process-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.hr-outsourcing-page .process-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hr-outsourcing-page .process-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #0d9488;
+  transform: translateX(-50%);
+}
+
+.hr-outsourcing-page .process-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.hr-outsourcing-page .process-step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.hr-outsourcing-page .step-marker {
+  width: 50px;
+  height: 50px;
+  background: #0d9488;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+}
+
+.hr-outsourcing-page .step-content {
+  flex: 1;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 60px;
+  border-left: 4px solid #0d9488;
+}
+
+.hr-outsourcing-page .process-step:nth-child(even) .step-content {
+  border-left: none;
+  border-right: 4px solid #0d9488;
+}
+
+.hr-outsourcing-page .step-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.hr-outsourcing-page .step-content p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+/* Animations */
+.hr-outsourcing-page .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.hr-outsourcing-page .reveal.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hr-outsourcing-page .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hr-outsourcing-page .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hr-outsourcing-page .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .hr-outsourcing-page .hero-image img {
+    max-width: 300px;
+  }
+
+  .hr-outsourcing-page .section-title {
+    font-size: 2rem;
+  }
+
+  .hr-outsourcing-page .services-grid,
+  .hr-outsourcing-page .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-outsourcing-page .process-timeline::before {
+    left: 30px;
+  }
+
+  .hr-outsourcing-page .process-step {
+    flex-direction: column !important;
+    align-items: flex-start;
+    margin-left: 60px;
+  }
+
+  .hr-outsourcing-page .step-marker {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .hr-outsourcing-page .step-content {
+    margin: 20px 0 0 0;
+    border-left: 4px solid #0d9488 !important;
+    border-right: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hr-outsourcing-page .hero-section {
+    padding: 100px 0 60px;
+  }
+
+  .hr-outsourcing-page .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hr-outsourcing-page .services-section,
+  .hr-outsourcing-page .benefits-section,
+  .hr-outsourcing-page .process-section {
+    padding: 60px 0;
+  }
+
+  .hr-outsourcing-page .service-card,
+  .hr-outsourcing-page .benefit-card {
+    padding: 24px 20px;
+  }
+
+  .hr-outsourcing-page .step-content {
+    padding: 24px;
+  }
+
+  .hr-outsourcing-page .process-step {
+    margin-left: 40px;
+  }
+}

@@ -1,0 +1,18 @@
+.ai-web-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #e9f2f6;
+  pointer-events: none;
+  display: block;
+}
+
+/* Fallback for low-performance devices or if JS is disabled */
+@media (prefers-reduced-motion: reduce) {
+  .ai-web-background {
+    display: none;
+  }
+}
