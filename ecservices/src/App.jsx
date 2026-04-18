@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import LandingPage from './components/LandingPage/LandingPage'; 
 import TrainingPage from './components/LandingPage/Training/Training';
@@ -55,6 +55,9 @@ function App() {
         <Route path="/cshackathon" element={<CSHackathon />} />
         <Route path="/pseb" element={<PSEB />} />
         <Route path="/contact" element={<ContactUs />} />
+        
+        {/* Fallback route to ensure app lands on LandingPage if route is not found */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>
   );

@@ -25,7 +25,8 @@
 .landing-page {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(180deg, #d8f1fe 0%, #fdfefe 50%, #e0fbf6 100%);
+  /* Subtle AI-like gradient behind everything, no foggy overlay */
+  background: linear-gradient(180deg, #e8f4f8 0%, #ffffff 100%);
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -164,14 +165,14 @@
 @keyframes drift {
   0% {
     transform: translate(0, 0);
-    opacity: 0.3;
+    opacity: 0.1;
   }
   50% {
-    opacity: 0.7;
+    opacity: 0.25;
   }
   100% {
     transform: translate(50px, 50px);
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }
 
@@ -183,7 +184,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.15;
 }
 
 .landing-page .web-line {
@@ -233,7 +234,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.15;
 }
 
 .landing-page .line {
@@ -286,14 +287,20 @@
    Header
    ========================================= */
 .landing-page .header {
-  padding: 120px 0;
-  background: transparent;
+  padding: 60px 0 40px;
+  background: none;
   text-align: center;
+  border: transparent;
+  margin-top: 40px;
 }
 
 .landing-page .logo-container {
   max-width: 1200px;
   margin: 0 auto;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
 }
 
 .landing-page .logo {
@@ -302,6 +309,7 @@
   filter: none;
   opacity: 1;
   box-shadow: none;
+  border: none;
 }
 
 .landing-page .hero {
@@ -340,7 +348,7 @@
 
 .landing-page .subtitle {
   font-size: 1.25rem;
-  color: #64748b;
+  color: #334155; /* Darkened for better contrast */
   line-height: 1.7;
   max-width: 700px;
   margin: 0 auto;
@@ -362,11 +370,9 @@
   background: white;
   padding: 40px 32px;
   border-radius: 16px;
-  box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.05),
-    0 8px 24px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -419,11 +425,8 @@
 }
 
 .landing-page .service-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.1),
-    0 4px 12px rgba(0, 0, 0, 0.05);
-  border-color: #0284c7;
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
 }
 
 .landing-page .icon-wrapper {
@@ -490,12 +493,11 @@
    ========================================= */
 .landing-page .footer {
   background: transparent;
-  color: #94a3b8;
+  color: #64748b;
   text-align: center;
-  padding: 40px 24px;
+  padding: 60px 24px;
   font-size: 0.875rem;
-  margin-top: -20px;
-  border-top: 1px solid rgba(226, 232, 240, 0.6);
+  border-top: none;
 }
 
 /* =========================================

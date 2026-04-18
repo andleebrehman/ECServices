@@ -168,7 +168,7 @@
    ========================================= */
 .training-page .hero-section {
   padding: 160px 0 140px;
-  background: #ffffff;
+  background: linear-gradient(135deg, #E2F3FE 0%, #CCFBF1 100%);
   text-align: center;
   position: relative;
   overflow: hidden;

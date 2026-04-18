@@ -7,189 +7,38 @@
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  background: linear-gradient(135deg, #9fc6ed 0%, #ffffff 50%, #def9f4 100%);
+  /* Transparent background to let LandingPage background show through */
+  background: transparent;
 }
 
-/* Gradient Mesh Overlay */
+.network-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Very soft overlay gradient for depth without clutter */
 .gradient-mesh-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
+  pointer-events: none;
   background:
     radial-gradient(
       circle at 20% 30%,
-      rgba(2, 132, 199, 0.08) 0%,
+      rgba(80, 159, 197, 0.05) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 70%,
-      rgba(13, 148, 136, 0.08) 0%,
+      rgba(80, 159, 197, 0.03) 0%,
       transparent 50%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(2, 132, 199, 0.05) 0%,
-      transparent 60%
     );
-  animation: gradientFlow 10s ease-in-out infinite;
-}
-
-@keyframes gradientFlow {
-  0%,
-  100% {
-    opacity: 0.4;
-    transform: scale(1) rotate(0deg);
-  }
-  25% {
-    opacity: 0.6;
-    transform: scale(1.05) rotate(5deg);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.1) rotate(0deg);
-  }
-  75% {
-    opacity: 0.6;
-    transform: scale(1.05) rotate(-5deg);
-  }
-}
-
-.bg-dot {
-  position: absolute;
-  background: var(--bg-color, rgba(81, 159, 198, 0.45));
-  border-radius: 50%;
-  animation: floatDot infinite alternate ease-in-out;
-}
-
-.bg-diamond {
-  position: absolute;
-  /* Use the variable with opacity */
-  background: var(--bg-color, rgba(81, 159, 198, 0.35));
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  transform: rotate(var(--rotation));
-  animation: floatDiamond infinite alternate ease-in-out;
-}
-
-@keyframes floatDiamond {
-  0% {
-    transform: rotate(var(--rotation)) translate(0, 0);
-  }
-  100% {
-    transform: rotate(calc(var(--rotation) + 20deg))
-      translate(var(--move-x), var(--move-y));
-  }
-}
-
-@keyframes floatDot {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(var(--move-x), var(--move-y));
-  }
-}
-
-.bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.15;
-  z-index: -1;
-}
-
-.blob-1 {
-  width: 500px;
-  height: 500px;
-  background: #d8f1fe;
-  top: -10%;
-  left: -10%;
-  animation: rotateBlob 40s infinite linear;
-}
-
-.blob-2 {
-  width: 600px;
-  height: 600px;
-  background: #e4fbf7;
-  bottom: -20%;
-  right: -10%;
-  animation: rotateBlob 50s infinite linear reverse;
-}
-
-.blob-3 {
-  width: 400px;
-  height: 400px;
-  background: rgba(2, 132, 199, 0.2);
-  top: 40%;
-  left: 50%;
-  animation: floatDot 30s infinite alternate linear;
-}
-
-@keyframes rotateBlob {
-  from {
-    transform: rotate(0deg) scale(1);
-  }
-  to {
-    transform: rotate(360deg) scale(1.1);
-  }
-}
-
-.bg-streak {
-  position: absolute;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(81, 159, 198, 0.35),
-    transparent
-  );
-  width: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.streak-1 {
-  top: 20%;
-  left: -100%;
-  animation: scanStreak 4s infinite linear;
-  box-shadow: 0 0 10px rgba(2, 132, 199, 0.4);
-}
-
-.streak-2 {
-  top: 50%;
-  right: -100%;
-  animation: scanStreakReverse 6s infinite linear;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(13, 148, 136, 0.5),
-    transparent
-  );
-}
-
-.streak-3 {
-  top: 80%;
-  left: -100%;
-  animation: scanStreak 7s infinite linear;
-  opacity: 0.7;
-}
-
-@keyframes scanStreak {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(200%);
-  }
-}
-
-@keyframes scanStreakReverse {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
 }

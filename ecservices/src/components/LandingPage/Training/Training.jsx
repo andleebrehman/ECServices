@@ -152,26 +152,6 @@ const Training = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <BackgroundElements color="#BBECE8" />
-        
-        {/* Decorative Background Circles and Dots */}
-        <div className="hero-circle circle-1"></div>
-        <div className="hero-circle circle-2"></div>
-        <div className="hero-circle circle-3"></div>
-        <div className="hero-dot dot-1"></div>
-        <div className="hero-dot dot-2"></div>
-        <div className="hero-dot dot-3"></div>
-        <div className="hero-dot dot-4"></div>
-        <div className="hero-dot dot-5"></div>
-        <div className="hero-dot dot-6"></div>
-
-        {/* #ABE5E9 Moving Lines */}
-        <div className="hero-moving-lines">
-          <div className="hero-moving-line line-h line-1"></div>
-          <div className="hero-moving-line line-h line-2"></div>
-          <div className="hero-moving-line line-v line-3"></div>
-          <div className="hero-moving-line line-d line-4"></div>
-        </div>
-
         <div className="container reveal">
           <h1>Adaptive to your business, <br />your growth & the future</h1>
           <p>Proudly serving the world's top asset finance & leasing companies with smart software technology.</p>
