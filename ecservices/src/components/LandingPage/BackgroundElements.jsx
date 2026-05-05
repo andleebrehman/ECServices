@@ -10,12 +10,14 @@ const BackgroundElements = () => {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
     let particles = [];
-    const particleCount = window.innerWidth < 768 ? 65 : 160;
+    // Reduced particle count for a less dense, larger web appearance
+    const particleCount = window.innerWidth < 768 ? 25 : 70;
     const colors = {
       node: 'rgba(61, 122, 150, 0.7)', // #3D7A96 with 0.7 opacity
       line: 'rgba(61, 122, 150, 0.5)',
     };
-    const maxDistance = 190;
+    // Increased max distance to allow lines to stretch further, creating larger polygons
+    const maxDistance = 280;
     let mouse = { x: null, y: null, radius: 180 };
 
     const handleMouseMove = (event) => {
@@ -44,8 +46,8 @@ const BackgroundElements = () => {
         // Slightly faster, but still smooth floating motion (increased by 20%)
         this.vx = (Math.random() - 0.5) * 0.48;
         this.vy = (Math.random() - 0.5) * 0.48;
-        // Keep nodes small and elegant
-        this.radius = Math.random() * 1.5 + 1;
+        // Slightly larger nodes to match the image reference
+        this.radius = Math.random() * 2 + 2;
       }
 
       update() {

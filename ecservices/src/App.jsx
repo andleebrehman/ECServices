@@ -55,8 +55,7 @@ function App() {
         <Route path="/cshackathon" element={<CSHackathon />} />
         <Route path="/pseb" element={<PSEB />} />
         <Route path="/contact" element={<ContactUs />} />
-        
-        {/* Fallback route to ensure app lands on LandingPage if route is not found */}
+{/* Fallback route to ensure app lands on LandingPage if route is not found */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>
