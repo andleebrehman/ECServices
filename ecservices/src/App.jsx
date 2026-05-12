@@ -25,6 +25,7 @@ import ITRegister from './components/LandingPage/Training/Bootcamp/BootCampRegis
 import ContactUs from './components/LandingPage/Training/contactus';
 import InHouse from './components/LandingPage/Training/Bootcamp/InHouse';
 import Event from './components/LandingPage/Training/Gallery/Event';
+import ITTraining from './components/LandingPage/IT-Training/IT-Training';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
         <Route path="/cshackathon" element={<CSHackathon />} />
         <Route path="/pseb" element={<PSEB />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/it-training" element={<ITTraining />} />
 {/* Fallback route to ensure app lands on LandingPage if route is not found */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

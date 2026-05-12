@@ -8,9 +8,10 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const isLandingPage = location.pathname === '/';
   const isConsultingPage = location.pathname.startsWith('/consulting');
+  const isITTrainingPage = location.pathname.startsWith('/it-training');
   
   // Decide whether to show the old training Footer
-  const showFooter = !isLandingPage && !isConsultingPage;
+  const showFooter = !isLandingPage && !isConsultingPage && !isITTrainingPage;
 
   return (
     <div className="layout">

@@ -65,7 +65,7 @@ const HROutSourcing = () => {
   return (
     <div className="hr-outsourcing-page">
     <section className="hero-section" style={{
-      backgroundImage: `linear-gradient(rgba(29, 115, 144, 0.85), rgba(33, 132, 132, 0.85)), url(${heroBg})`,
+      backgroundImage: `linear-gradient(rgba(44, 115, 139, 0.85), rgba(72, 146, 146, 0.85)), url(${heroBg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'

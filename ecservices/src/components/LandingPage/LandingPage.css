@@ -359,11 +359,12 @@
    Service Cards
    ========================================= */
 .landing-page .services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 32px;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .landing-page .service-card {

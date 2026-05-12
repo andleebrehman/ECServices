@@ -29,6 +29,16 @@ const services = [
     path: '/consulting',
   },
   {
+    title: 'IT Training',
+    description: 'Enhance your technical expertise with our specialized IT training programs. Master cutting-edge technologies and advance your career.',
+    icon: trainingIcon,
+    iconBg: '#F3E8FF',
+iconColor: '#7C3AED',
+hoverColor: '#7C3AED',
+    cta: 'Start Training',
+    path: '/it-training',
+  },
+  {
     title: 'HR Outsourcing',
     description: 'Streamline your human resources with our managed outsourcing solutions. Focus on your core business while we handle your talent.',
     icon: hrIcon,
@@ -64,7 +74,7 @@ const LandingPage = () => {
 
         <div className="services-container">
           {services.map((service, index) => (
-            <div className="service-card" key={index} data-service={service.title.toLowerCase().replace(' ', '-')} onClick={() => navigate(service.path)}>
+            <div className="service-card" key={index} data-service={service.title.toLowerCase().replace(' ', '-')} onClick={() => navigate(service.path)} style={{ width: '300px', flexShrink: 0 }}>
               <div className="icon-wrapper" style={{ backgroundColor: service.iconBg }}>
                 {index === 0 && (
                   <svg className="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,6 +89,12 @@ const LandingPage = () => {
                   </svg>
                 )}
                 {index === 2 && (
+                  <svg className="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.75 17L9 20L12 18L15 20L14.25 17M9.75 17H14.25M9.75 17V12C9.75 10.3431 11.0931 9 12.75 9H14.25C15.9069 9 17.25 10.3431 17.25 12V17M3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6C4.34315 3 3 4.34315 3 6Z" stroke={service.iconColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M7 7H17" stroke={service.iconColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+                {index === 3 && (
                   <svg className="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 20C17 18.3431 14.7614 17 12 17C9.23858 17 7 18.3431 7 20M21 17C21 15.7635 19.7957 14.7014 18 14.2722M3 17C3 15.7635 4.20427 14.7014 6 14.2722M18 10.2361C18.6137 9.68679 19 8.8885 19 8C19 6.34315 17.6569 5 16 5C15.2316 5 14.5308 5.28885 14 5.76389M6 10.2361C5.38625 9.68679 5 8.8885 5 8C5 6.34315 6.34315 5 8 5C8.76835 5 9.46924 5.28885 10 5.76389M12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11C15 12.6569 13.6569 14 12 14Z" stroke={service.iconColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
