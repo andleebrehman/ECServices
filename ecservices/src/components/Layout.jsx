@@ -8,14 +8,16 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const isLandingPage = location.pathname === '/';
   const isConsultingPage = location.pathname.startsWith('/consulting');
-  const isITTrainingPage = location.pathname.startsWith('/it-training');
+  const isITServicesPage = location.pathname.startsWith('/it-services') || location.pathname.startsWith('/it-training');
   
-  // Decide whether to show the old training Footer
-  const showFooter = !isLandingPage && !isConsultingPage && !isITTrainingPage;
+  // Decide whether to show the global Navbar
+  const showNavbar = !isLandingPage && !isConsultingPage && !isITServicesPage;
+  // Decide whether to show the global Footer
+  const showFooter = !isLandingPage && !isConsultingPage && !isITServicesPage;
 
   return (
     <div className="layout">
-      {!isLandingPage && <Navbar />}
+      {showNavbar && <Navbar />}
       <main className="main-content" style={isLandingPage ? { paddingTop: 0 } : {}}>
         {children}
       </main>

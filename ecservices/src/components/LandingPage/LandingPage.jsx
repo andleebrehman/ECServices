@@ -29,14 +29,14 @@ const services = [
     path: '/consulting',
   },
   {
-    title: 'IT Training',
-    description: 'Enhance your technical expertise with our specialized IT training programs. Master cutting-edge technologies and advance your career.',
+    title: 'IT Services',
+    description: 'Delivering reliable and scalable IT services to help businesses streamline operations, improve system performance, and adopt modern technologies for sustainable growth',
     icon: trainingIcon,
     iconBg: '#F3E8FF',
 iconColor: '#7C3AED',
 hoverColor: '#7C3AED',
-    cta: 'Start Training',
-    path: '/it-training',
+    cta: 'Explore Services',
+    path: '/it-services',
   },
   {
     title: 'HR Outsourcing',

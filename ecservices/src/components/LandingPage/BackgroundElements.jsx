@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './BackgroundElements.css';
 
-const BackgroundElements = () => {
+const BackgroundElements = ({ customColors, customClass, hideOverlay }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -11,9 +11,10 @@ const BackgroundElements = () => {
     let animationFrameId;
     let particles = [];
     const particleCount = window.innerWidth < 768 ? 65 : 160;
-    const colors = {
+    const colors = customColors || {
       node: 'rgba(61, 122, 150, 0.7)', // #3D7A96 with 0.7 opacity
-      line: 'rgba(61, 122, 150, 0.5)',
+      lineBase: '80, 159, 199',
+      shadow: 'rgba(61, 122, 150, 0.8)'
     };
     const maxDistance = 190;
     let mouse = { x: null, y: null, radius: 180 };
@@ -79,7 +80,7 @@ const BackgroundElements = () => {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = colors.node;
         ctx.shadowBlur = 4;
-        ctx.shadowColor = 'rgba(61, 122, 150, 0.8)';
+        ctx.shadowColor = colors.shadow;
         ctx.fill();
         ctx.shadowBlur = 0; // Reset for lines
       }
@@ -107,7 +108,7 @@ const BackgroundElements = () => {
             let distance = Math.sqrt(distSq);
             // Draw connecting line
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(80, 159, 199, ${0.5 * (1 - distance / maxDistance)})`; // Fade out line based on distance
+            ctx.strokeStyle = `rgba(${colors.lineBase}, ${0.5 * (1 - distance / maxDistance)})`; // Fade out line based on distance
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -131,9 +132,9 @@ const BackgroundElements = () => {
   }, []);
 
   return (
-    <div className="global-background">
+    <div className={customClass || "global-background"}>
       <canvas ref={canvasRef} className="network-canvas" />
-      <div className="gradient-mesh-overlay"></div>
+      {!hideOverlay && <div className="gradient-mesh-overlay"></div>}
     </div>
   );
 };
