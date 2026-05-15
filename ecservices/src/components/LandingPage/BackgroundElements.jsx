@@ -4,6 +4,11 @@ import './BackgroundElements.css';
 const BackgroundElements = ({ customColors, customClass, hideOverlay }) => {
   const canvasRef = useRef(null);
 
+  // Extract primitive properties so we can safely use them as dependencies
+  const customNodeColor = customColors?.node;
+  const customLineBase = customColors?.lineBase;
+  const customShadowColor = customColors?.shadow;
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -11,10 +16,10 @@ const BackgroundElements = ({ customColors, customClass, hideOverlay }) => {
     let animationFrameId;
     let particles = [];
     const particleCount = window.innerWidth < 768 ? 65 : 160;
-    const colors = customColors || {
-      node: 'rgba(61, 122, 150, 0.7)', // #3D7A96 with 0.7 opacity
-      lineBase: '80, 159, 199',
-      shadow: 'rgba(61, 122, 150, 0.8)'
+    const colors = {
+      node: customNodeColor || 'rgba(61, 122, 150, 0.7)', // #3D7A96 with 0.7 opacity
+      lineBase: customLineBase || '80, 159, 199',
+      shadow: customShadowColor || 'rgba(61, 122, 150, 0.8)'
     };
     const maxDistance = 190;
     let mouse = { x: null, y: null, radius: 180 };
@@ -129,7 +134,7 @@ const BackgroundElements = ({ customColors, customClass, hideOverlay }) => {
       window.removeEventListener('mouseout', handleMouseOut);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [customNodeColor, customLineBase, customShadowColor]);
 
   return (
     <div className={customClass || "global-background"}>
