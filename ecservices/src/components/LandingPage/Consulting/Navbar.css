@@ -12,8 +12,8 @@
 
 .nav-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 15px auto;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,10 +33,11 @@
 }
 
 .logo-image {
-  height: 40px;
+  height: 60px;
   width: auto;
   transition: all 0.3s ease;
 }
+
 
 .logo-image:hover {
   transform: scale(1.05);
